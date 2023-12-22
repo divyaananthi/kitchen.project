@@ -3,18 +3,58 @@
     margin:0;
     box-sizing: border-box;
 }
+
+:root{
+    --main-color: #FF90BC;
+    --box-color:#8ACDD7;
+    --text-color:#1F1717;
+    
+}
+
+.overall-page{
+      
+    background-color:white;
+    width:100%;
+    min-height:100vh;
+        
+}
+
+nav{
+
+    background-color:var(--main-color);
+    padding:10px 0px 10px 10px;
+    height: 100%;
+    width:100%;
+    position: sticky;
+    z-index: 999;
+    top:0;
+    
+}
+
+nav .icon-nav{
+
+    display: none;
+    color:var(--main-color);
+    font-size: 27px;
+}
+
+/* ..................................overal ......................... */
+.overal-main{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+
+
+
 /* ...............................main card.......................... */
-
-
-
-
-.main-card{
-
-    /* border:2px solid black; */
+    .main-card{  
     width:300px;
     height:500px;
     box-shadow: 0px 0px 4px black;
-    /* text-align: center; */
     margin:10px;
     padding: 5px;
 
@@ -24,12 +64,12 @@
     width:270px;
 }
 .btn-card{
-      
+     background-color: var(--box-color); 
      font-size:20px;
      text-align: center;
      width:110px;
-     background-color: skyblue;
-     color:red;
+     padding-right: 5px;
+     color:var(--text-color);
      height:39px;
      border:none;
      }
