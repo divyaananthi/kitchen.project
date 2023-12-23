@@ -107,3 +107,23 @@ nav{
 
     text-align: center;
 }
+
+
+/* .................................mobile ......................  */
+
+@media screen and (max-width:316px){
+
+    .main-card{
+         
+        width:100%;
+        /* height: 100%; */
+    }
+    .overall-page{
+      
+        background-color:#CDFAD5;
+        width:100%;
+        min-height:100vh;
+            
+    }
+
+}
