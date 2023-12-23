@@ -15,7 +15,7 @@
 
 .overall-page{
       
-    background-color:#EAECCC;
+    background-color:#CDFAD5;
     width:100%;
     min-height:100vh;
         
@@ -61,11 +61,11 @@ nav{
 .overal{
 
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
         justify-content: center;
         align-items: center;
        row-gap:10px ;
-       column-gap:15px;
+       column-gap:35px;
         padding: 10px;
         /* text-transform: uppercase; */
 
@@ -75,13 +75,35 @@ nav{
 
     width:300px;
     height:450px;
-    border: 2px solid black;
-    margin:10px;
-    background-color: white;
+    /* border: 2px solid black; */
+    margin:10px 50px;
+    background-color: #c5c5be;
+    box-shadow: 15px 20px 20px rgb(117, 115, 115),
+           inset 4px 4px 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    justify-content:center ;
+    align-items: center;
+    
+}
+.main-card:hover{
+
+    box-shadow: inset 15px 10px 10px rgb(117, 115, 115),
+           inset -4px -4px 10px white;
 }
 .img-card{
 
     width:300px;
     height:350px;
     padding:8px;
+}
+.card-title{
+
+    text-align: center;
+    color:var(--box-color) ;
+    font-weight: bold;
+}
+.card-text{
+
+    text-align: center;
 }
