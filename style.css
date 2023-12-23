@@ -5,15 +5,17 @@
 }
 
 :root{
-    --main-color: #FF90BC;
-    --box-color:#8ACDD7;
+    --main-color:#FFEADD;
+    --box-color:#2B3499;
     --text-color:#1F1717;
+    --border-color:silver;
     
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
 
 .overall-page{
       
-    background-color:white;
+    background-color:#EAECCC;
     width:100%;
     min-height:100vh;
         
@@ -28,48 +30,58 @@ nav{
     position: sticky;
     z-index: 999;
     top:0;
+    padding:5px 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0.3)
     
 }
 
-nav .icon-nav{
 
-    display: none;
-    color:var(--main-color);
-    font-size: 27px;
+.navbar .navbar-brand{
+
+    color: #5F0F40;
+    font-family: 'Roboto', sans-serif;
+}
+
+#navbarNav a{
+
+        color:black;
+}
+#navbarNav a:hover{
+    border-bottom: 2px solid red;
+}
+.tag-h1{
+
+    text-align: center;
+    padding:20px;
+    font-size:70px;
+    color:var(--box-color);
 }
 
 /* ..................................overal ......................... */
-.overal-main{
+.overal{
 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 10px;
-    padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        justify-content: center;
+        align-items: center;
+       row-gap:10px ;
+       column-gap:15px;
+        padding: 10px;
+        /* text-transform: uppercase; */
+
 }
+ 
+.main-card{
 
-
-
-
-/* ...............................main card.......................... */
-    .main-card{  
     width:300px;
-    height:500px;
-    box-shadow: 0px 0px 4px black;
+    height:450px;
+    border: 2px solid black;
     margin:10px;
-    padding: 5px;
-
+    background-color: white;
 }
-.card-img-top{
+.img-card{
 
-    width:270px;
+    width:300px;
+    height:350px;
+    padding:8px;
 }
-.btn-card{
-     background-color: var(--box-color); 
-     font-size:20px;
-     text-align: center;
-     width:110px;
-     padding-right: 5px;
-     color:var(--text-color);
-     height:39px;
-     border:none;
-     }
