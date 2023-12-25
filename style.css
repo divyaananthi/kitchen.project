@@ -13,9 +13,10 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
 
+  
 .overall-page{
       
-    background-color:#CDFAD5;
+    background-color:#E5D1FA;
     width:100%;
     min-height:100vh;
         
@@ -53,7 +54,10 @@ nav{
 
     text-align: center;
     padding:20px;
-    font-size:70px;
+    font-size:60px;
+    font-family:  'Lobster', sans-serif;
+    
+    
     color:var(--box-color);
 }
 
@@ -74,7 +78,7 @@ nav{
 .main-card{
 
     width:300px;
-    height:450px;
+    height:470px;
     /* border: 2px solid black; */
     margin:10px 50px;
     background-color: #c5c5be;
@@ -95,17 +99,29 @@ nav{
 
     width:300px;
     height:350px;
-    padding:8px;
+    /* padding-left: 90px;
+    padding-top: 20px; */
+    padding-top: 20px;
 }
 .card-title{
 
     text-align: center;
     color:var(--box-color) ;
     font-weight: bold;
+    line-height: 30px;
+    padding:3px;
+   
 }
 .card-text{
 
     text-align: center;
+}
+.button-tag{
+      
+      text-align: center;
+      border: none;
+      margin-left: 112px;
+      
 }
 
 
