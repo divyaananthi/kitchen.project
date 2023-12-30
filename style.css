@@ -14,6 +14,11 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
 
+
+
+
+/* -------------------overal page-------------------------- */
+
   
 .overall-page{
       
@@ -22,6 +27,8 @@
     min-height:100vh;
     
 }
+
+/* ------------------------------------nav bar------------------------ */
 
 nav{
 
@@ -36,17 +43,14 @@ nav{
     box-shadow: 5px 5px 20px rgba(0,0,0.3)
     
 }
-
-
 .navbar .navbar-brand{
 
     color: #ca3491;
     font-family: 'Roboto', sans-serif;
 }
-
 #navbarNav a{
 
-        color:black;
+    color:black;
 }
 #navbarNav a:hover{
     border-bottom: 2px solid red;
@@ -61,25 +65,25 @@ nav{
 }
 
 /* ..................................overal ......................... */
+
+
 .overal{
 
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-        justify-content: center;
-        align-items: center;
-       row-gap:10px ;
-       column-gap:35px;
-        padding: 10px;
-        
-        /* text-transform: uppercase; */
-
-}
- 
+     display: grid;
+     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+     justify-content: center;
+     align-items: center;
+     row-gap:10px ;
+     column-gap:35px;
+     padding: 10px;
+    
+ }
+    
+  /* --------------------------------main card-----------------------------   */
 .main-card{
 
     width:300px;
     height:450px;
-    /* border: 2px solid black; */
     margin:10px 50px;
     background-color:rgb(252, 248, 241);
     box-shadow: 5px 0px 5px rgb(216, 213, 213),
@@ -102,8 +106,6 @@ nav{
     height:350px;
     padding-top: 20px;
 }
-
-   
 
 .card-title{
 
@@ -156,9 +158,10 @@ nav{
 
     .overal{
 
-     display: grid;
-     grid-template-columns: auto auto;
-    } 
+       display: grid;
+       grid-template-columns: auto auto;
+    }
+
     .overall-page{
       
         background-color:var(--main-color);
