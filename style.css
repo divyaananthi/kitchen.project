@@ -5,10 +5,11 @@
 }
 
 :root{
-    --main-color:#FFEADD;
+    --main-color:#f8eeaf;
     --box-color:#2B3499;
     --text-color:#1F1717;
     --border-color:silver;
+    --background-color:#b0c7e9;
     
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
@@ -16,15 +17,15 @@
   
 .overall-page{
       
-    background-color:#E5D1FA;
+    background-color:var(--main-color);
     width:100%;
     min-height:100vh;
-        
+    
 }
 
 nav{
 
-    background-color:var(--main-color);
+    background-color:var(--background-color);
     padding:10px 0px 10px 10px;
     height: 100%;
     width:100%;
@@ -39,7 +40,7 @@ nav{
 
 .navbar .navbar-brand{
 
-    color: #5F0F40;
+    color: #ca3491;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -56,8 +57,6 @@ nav{
     padding:20px;
     font-size:60px;
     font-family:  'Lobster', sans-serif;
-    
-    
     color:var(--box-color);
 }
 
@@ -71,6 +70,7 @@ nav{
        row-gap:10px ;
        column-gap:35px;
         padding: 10px;
+        
         /* text-transform: uppercase; */
 
 }
@@ -78,50 +78,56 @@ nav{
 .main-card{
 
     width:300px;
-    height:470px;
+    height:450px;
     /* border: 2px solid black; */
     margin:10px 50px;
-    background-color: #c5c5be;
-    box-shadow: 15px 20px 20px rgb(117, 115, 115),
-           inset 4px 4px 10px white;
+    background-color:rgb(252, 248, 241);
+    box-shadow: 5px 0px 5px rgb(216, 213, 213),
+           inset 4px 4px 10px rgb(253, 245, 245);
     border-radius: 20px;
     overflow: hidden;
     justify-content:center ;
     align-items: center;
     
+    
 }
 .main-card:hover{
 
-    box-shadow: inset 15px 10px 10px rgb(117, 115, 115),
+    box-shadow: inset 5px 0px 5px rgb(245, 239, 239),
            inset -4px -4px 10px white;
 }
 .img-card{
-
+    
     width:300px;
     height:350px;
     /* padding-left: 90px;
     padding-top: 20px; */
     padding-top: 20px;
 }
+
+   
+
 .card-title{
 
     text-align: center;
-    color:var(--box-color) ;
-    font-weight: bold;
-    line-height: 30px;
-    padding:3px;
-   
-}
-.card-text{
-
-    text-align: center;
+    padding:6px;
+    color:var(--box-color)
 }
 .button-tag{
       
       text-align: center;
       border: none;
-      margin-left: 112px;
-      
+      margin-left: 80px;
+      width:130px;
+      height:40px;
+      background-color: #ca3491;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+}
+.button-tag:hover{
+
+        background-color: skyblue;
 }
 
 
@@ -136,10 +142,60 @@ nav{
     }
     .overall-page{
       
-        background-color:#CDFAD5;
+        background-color:var(--main-color);
+        width:100%;
+        min-height:100vh;
+            
+    }
+    .tag-h1{
+     
+   font-size:30px;
+
+    }
+
+}
+@media screen and (min-width:400px) and (max-width:1000px){
+
+    .overal{
+
+     display: grid;
+     grid-template-columns: auto auto;
+    } 
+    .overall-page{
+      
+        background-color:var(--main-color);
         width:100%;
         min-height:100vh;
             
     }
 
 }
+@media  screen and (min-width:100px) and (max-width:1024) {
+
+    .overall-page{
+      
+        background-color:var(--main-color);
+        width:100%;
+        min-height:100vh;
+            
+    }
+    nav{
+
+    background-color:var(--main-color);
+    padding:10px 0px 10px 10px;
+    height: 100%;
+    width:100%;
+    position: sticky;
+    z-index: 999;
+    top:0;
+    padding:5px 5px;
+    box-shadow: 5px 5px 20px rgba(0,0,0.3)
+    
+}
+
+
+    
+}
+
+
+
