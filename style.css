@@ -1,221 +1,540 @@
+
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-}
-
-:root{
-    --main-color:#f8eeaf;
-    --box-color:#2B3499;
-    --text-color:#1F1717;
-    --border-color:#EAECCC;
-    --background-color:#b0c7e9;
-    
-}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,900&display=swap');
-
-
-
-
-/* -------------------overal page-------------------------- */
-
-  
-.overall-page{
-      
-    background-color:var(--main-color);
-    width:100%;
-    min-height:100vh;
-    
-}
-
-/* ------------------------------------nav bar------------------------ */
-
-nav{
-
-    background-color:var(--background-color);
-    padding:10px 0px 10px 10px;
-    height: 100%;
-    width:100%;
-    position: sticky;
-    z-index: 999;
-    top:0;
-    padding:5px 5px;
-    box-shadow: 5px 5px 20px rgba(0,0,0.3)
-    
-}
-.navbar .navbar-brand{
-
-    color: #ca3491;
-    font-family: 'Roboto', sans-serif;
-}
-#navbarNav a{
-
-    color:black;
-}
-#navbarNav a:hover{
-    border-bottom: 2px solid red;
-}
-.tag-h1{
-
-    text-align: center;
-    padding:20px;
-    font-size:60px;
-    font-family:  'Lobster', sans-serif;
-    color:var(--box-color);
-}
-
-/* ..................................overal ......................... */
-
-
-.overal{
-
-     display: grid;
-     grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
-     justify-content: center;
-     align-items: center;
-     row-gap:10px ;
-     column-gap:35px;
-     padding: 10px;
-    
- }
-    
-  /* --------------------------------main card-----------------------------   */
-.main-card{
-
-    width:300px;
-    height:450px;
-    margin:10px 50px;
-    background-color:var(--border-color) ;
-    box-shadow: 5px 0px 5px var(--border-color),
-           inset 4px 4px 10px var(--border-color);
-    border-radius: 20px;
-    overflow: hidden;
-    justify-content:center ;
-    align-items: center;
-    
-    
-}
-.main-card:hover{
-
-    box-shadow: inset 5px 0px 5px rgb(245, 239, 239),
-           inset -4px -4px 10px white;
-}
-.img-card{
-    
-    width:300px;
-    height:350px;
-    padding-top: 20px;
-}
-.img-card:hover{
-    transform: scale(1.2);
-}
-
-.card-title{
-
-    text-align: center;
-    padding:6px;
-    color:var(--box-color)
-}
-.button-tag{
-      
-      text-align: center;
-      border: none;
-      margin-left: 80px;
-      width:130px;
-      height:40px;
-      background-color: #ca3491;
-      border-radius: 5px;
-      color: white;
-      font-weight: bold;
-}
-.button-tag:hover{
-
-        background-color: skyblue;
-}
-
-
-/* .................................mobile ......................  */
-
-@media screen and (max-width:316px){
-
-    .main-card{
-         
-        width:100%;
-        /* height: 100%; */
     }
-    .overall-page{
-      
-        background-color:var(--main-color);
-        width:100%;
-        min-height:100vh;
-            
+    :root{
+        --background:#176B87;
+        --backgroundcolor:green;
+        --text:white;
+        --color:#E5E1DA;
+        --dark: #a74734;
     }
-    .tag-h1{
-     
-   font-size:30px;
-
-    }
-
-}
-/* ................................tab.................................. */
-
-
-@media screen and (min-width:420px) and (max-width:1024px){
-
-    .overal{
-
-       display: grid;
-       grid-template-columns: auto auto;
-    }
-
-    .overall-page{
-      
-        background-color:var(--main-color);
-        width:100%;
-        min-height:100vh;
-            
-    }
-
-    .main-card{
-         
-        width:250px;
-        height: 400px;
+    
+     /* ------------------------------------nav bar------------------------ */
+     .nav-bar{
+        display:flex;
+        justify-content: space-around;
         align-items: center;
+        padding:5px 0px;
+        background-color: white;
+        border-bottom:1px solid rgb(105, 102, 102);
+        position: sticky;
+        z-index:9999;
+        top:0;
+    }
+    .nav-bar img{
+        width:200px;
+        height:60px;
+        object-fit: cover;
+    }
+    .center-nav{
+        display: flex;
         justify-content: center;
-        padding:6px;
+        align-items: center;
+        gap:15px;
+        font-size:14px;
+        right:0;
     }
-
-}
-
-/* ......................nav media......................... */
-
-
-@media  screen and (min-width:100px) and (max-width:1024) {
-
-    .overall-page{
-      
-        background-color:var(--main-color);
-        width:100%;
-        min-height:100vh;
-            
+    .box{
+        display: block;
     }
-    nav{
-
-    background-color:var(--main-color);
-    padding:10px 0px 10px 10px;
-    height: 100%;
+    .center-nav a:hover{
+        cursor: pointer;
+        color:rgb(182, 140, 50);
+    }
+    .right-nav{
+        display:flex;
+        color:rgb(68, 64, 64);
+        gap:15px;
+        font-size:22px;
+    }
+    .inside{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top:80px;
+        left:0px;
+        gap:70px;
+        justify-content: start;
+        align-items: start;
+        padding:15px;
+        background-color:white;
+        height:450px;
+        font-family: 'Noto Serif Balinese', serif;
+        font-family: 'Sevillana', cursive;
+        line-height:30px;
+        display: none;
+    }
+    .inside h6{
+        font-size:17px;
+    }
+    .inside p{
+        font-size:14px;
+    }
+    .dining:hover+.inside-dining{
+        display: flex;
+    }
+    .inside-decor{
+        left:350px;
+    }
+    .decor:hover+.inside-decor{
+        display: flex;
+    }
+    .inside-bath{
+        left:400px;
+        background-color:white;
+        min-height:200px;
+        padding:10px;
+    }
+    .bath:hover+.inside-bath{
+        display: flex;
+    }
+    .inside-sale{
+        left:450px;
+        background-color:white;
+        min-height:200px;
+        padding:10px;
+    }
+    .sale:hover+.inside-sale{
+    display: flex;
+    }
+    .inside-kitchen{
+        left:480px;
+        background-color:white;
+        min-height:250px;
+        padding:10px;
+    }
+    .kitchen:hover+.inside-kitchen{
+    display: flex;
+    }
+    .inside-bags{
+        min-height:300px;
+    }
+    .bags:hover+.inside-bags{
+        display: flex;
+    }
+    .inside-furniture{
+        min-height:200px;
+        left:760px;
+    }
+    .furniture:hover+.inside-furniture{
+        display: flex;
+    }
+    .inside-stationery{
+        min-height:200px;
+        left:900px;
+    }
+    .stationery:hover+.inside-stationery{
+        display: flex;
+    }
+    .inside-gift{
+        min-height:200px;
+    }
+    .gift:hover+.inside-gift{
+        display: flex;
+    }
+    input:checked~ .center-nav{
+        left:0;.nav-bar{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        padding:5px 0px;
+        background-color: white;
+        border-bottom:1px solid rgb(105, 102, 102);
+        position: sticky;
+        z-index:9999;
+        top:0;
+    }}
+    .nav-bar img{
+        width:200px;
+        height:60px;
+        object-fit: cover;
+    }
+    .center-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:15px;
+        font-size:14px;
+        right:0;
+    }
+    .center-nav a:hover{
+        cursor: pointer;
+        color:rgb(182, 140, 50);
+    }
+    .right-nav{
+        display:flex;
+        color:rgb(68, 64, 64);
+        gap:15px;
+        font-size:22px;
+    }
+    .inside{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        top:80px;
+        left:0px;
+        gap:70px;
+        justify-content: start;
+        align-items: start;
+        padding:15px;
+        background-color:white;
+        height:450px;
+        font-family: 'Noto Serif Balinese', serif;
+        font-family: 'Sevillana', cursive;
+        line-height:30px;
+        display: none;
+    }
+    .inside h6{
+        font-size:17px;
+    }
+    .inside p{
+        font-size:14px;
+    }
+    .dining:hover+.inside-dining{
+        display: flex;
+    }
+    .inside-decor{
+        left:350px;
+    }
+    .decor:hover+.inside-decor{
+        display: flex;
+    }
+    .inside-bath{
+        left:400px;
+        background-color:white;
+        min-height:200px;
+        padding:10px;
+    }
+    .bath:hover+.inside-bath{
+        display: flex;
+    }
+    .inside-sale{
+        left:450px;
+        background-color:white;
+        min-height:200px;
+        padding:10px;
+    }
+    .sale:hover+.inside-sale{
+    display: flex;
+    }
+    .inside-kitchen{
+        left:480px;
+        background-color:white;
+        min-height:250px;
+        padding:10px;
+    }
+    .kitchen:hover+.inside-kitchen{
+    display: flex;
+    }
+    .inside-bags{
+        min-height:300px;
+    }
+    .bags:hover+.inside-bags{
+        display: flex;
+    }
+    .inside-furniture{
+        min-height:200px;
+        left:760px;
+    }
+    .furniture:hover+.inside-furniture{
+        display: flex;
+    }
+    .inside-stationery{
+        min-height:200px;
+        left:900px;
+    }
+    .stationery:hover+.inside-stationery{
+        display: flex;
+    }
+    .inside-gift{
+        min-height:200px;
+    }
+    .gift:hover+.inside-gift{
+        display: flex;
+    }
+    input:checked~ .center-nav{
+        left:0;
+        transition: 0.8s;
+        
+    }
+    .nav-bar .fa-bars{
+        display: none;
+    }
+    .nav-bar .fa-bars{
+        display: none;
+    }
+/* -------------------------------------------------------------overal------------------------------------- */
+.overal-page{
+    background-color:var(--color) ;
     width:100%;
-    position: sticky;
-    z-index: 999;
-    top:0;
-    padding:5px 5px;
-    box-shadow: 5px 5px 20px rgba(0,0,0.3)
-    
+    min-height: 100vh;
 }
 
-
-    
+.tag{
+     text-align: center;
+     padding:30px;
+     font-size: 50px;
+     text-shadow: 0px 1px 0px #000,
+                  0px 2px 0px  #000;
+     
 }
 
+/* .................................................card-card----------------------------------------/ */
+  
+  .card-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 10px;
+    padding: 10px;
+   
+  } 
+.card1{
+    width:300px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 5px 7px 7px rgba(0,0,0.3),
+                 inset 4px 4px 10px white;
+    background-color: var(--text);
+    
+}
+.card1:hover{
+         
+    box-shadow: inset 1px 5px 5px rgba(0,0,0.3),
+                 4px 4px 10px white;
+}
+.image{
+    width:310px;
+    padding:10px
+}
+.image1{
+    width:280px;
+    padding:20px;
+    padding-left:70px;
+}
+.image2{
+     width:280px;
+     padding:20px;
+     padding-left:25px;
+}
+.image3{
+    width:230px;
+    padding-left:40px;
+}
+.image5{
+    width:250px;
+    padding:1px;
+    padding-left:60px;
+}
+.image7{
+    width:275px;
+    padding:10px;
+    padding-left:60px;
+}
+.image9{
+    width:270px;
+    padding:20px;
+    padding-left:70px;
+}
+.image10{
+    padding:20px;
+}
+.image11{
+    width:280px;
+}
+.add{
+    text-align: center;
+    padding:13px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: var(--backgroundcolor);
+    width: 140px;
+    margin-left: 50px;
+    color:var(--text);
+    border: none;
+    border-radius: 7px;
+}
 
+.fa-heart{
+    color:black;
+    font-size: 37px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: silver;
+    
+    }
+  .fa-heart:hover{
 
+       color:red;
+  } 
+  .back-heading{
+       font-size: 50px;
+       padding-top: 40px;
+  } 
+
+.para1-cont{
+
+    font-size: 20px;
+    padding: 10px;
+}
+
+.backing-dished1{
+    
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    background-color:var(--dark);
+    color: white;
+
+}
+.backing-dished2{
+    
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    background-color: var(--dark);
+    color: white;
+}
+.backing-dished3{
+    
+    /* border: 2px solid black; */
+    margin-top: 10px;
+    background-color: var(--dark);
+    color: white;
+}
+
+.footer{
+    background-color: #f8edca;
+    display: flex;
+    flex-direction: column;
+}
+.footer-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+.footer-logo img{
+    width:35px;
+    height:35px;
+    /* object-fit: cover; */
+}
+.footer-content{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: start;
+    gap:40px;
+    padding:30px;
+}
+.stay-in-touch{
+    display: flex;
+    flex-direction: column;
+    width:300px;
+    padding:20px;
+}
+.stay-in-touch h1{
+    font-size:20px;
+    padding:20px 0px;
+    color:#796439
+}
+.stay-in-touch p{
+    font-size:16px;
+    color:#72706b
+}
+.stay-in-touch h4{
+    font-size:16px;
+}
+.end-foot{
+   width:150px;
+   padding-top:37px;
+    }
+.end-foot h2{
+font-size:23px;
+color:#8f794b;
+padding-bottom:20px;
+}
+.end-foot h4{
+    font-size:18px;
+    line-height: 30px;
+    color:rgb(63, 61, 61);
+    }
+.accept-app{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    padding:20px;
+    gap:10px;
+}
+.accept-app img{
+    width:70px;
+    height:30px;
+    object-fit: cover;
+}
+.accept-app p{
+font-size:20px;
+color:rgb(88, 87, 87);
+}
+
+@media screen and (min-width:300px) and (max-width:1100px) {
+    .nav-bar img{
+        width:120px;
+        height:50px;
+        object-fit: cover;
+    }
+    .center-nav{
+        display:none;
+    }
+    .center-nav{
+        margin-top:0px;
+        height:90vh;
+        display: flex;
+        gap:10px;
+        width:60%;
+        left:-100%;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        position: absolute;
+        z-index: 999;
+        top:60px;
+        font-size:20px;
+        line-height: 20px;
+        padding:20px;
+        overflow: hidden;
+        background-color:bisque;
+    }
+    .inside-decor{
+        left:10px;
+    }
+    .inside-bath{
+        left:10px;
+    }
+    .inside-sale{
+        left:10px;
+    }
+    .inside-kitchen{
+        left:10px;
+    }
+    .inside-bags{
+        min-height:10px;
+    }
+    .inside-furniture{
+        left:10px;
+    }
+    .inside-stationery{
+        left:10px;
+    }
+    .inside-gift{
+        min-height:10px;
+    }
+    .nav-bar .fa-bars{
+        color:rgb(66, 64, 64);
+        z-index: 999;
+        position: absolute;
+        font-size:22px;
+        top:20px;
+        display: inline;
+    }
+}
