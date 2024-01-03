@@ -37,9 +37,7 @@
         font-size:14px;
         right:0;
     }
-    .box{
-        display: block;
-    }
+    
     .center-nav a:hover{
         cursor: pointer;
         color:rgb(182, 140, 50);
